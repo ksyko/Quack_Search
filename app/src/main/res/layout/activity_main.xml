@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/etSearch"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_toStartOf="@+id/ibSearch"
+            android:autofillHints=""
+            android:background="@color/colorAccent"
+            android:elevation="4dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="@string/search_duck"
+            android:inputType="text"
+            android:padding="@dimen/padding"
+            android:singleLine="true" />
+
+        <ImageButton
+            android:id="@+id/ibSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/margin"
+            android:background="@color/colorAccentDark"
+            android:contentDescription="TODO"
+            android:elevation="6dp"
+            android:padding="@dimen/padding"
+            app:srcCompat="@drawable/ic_search_black" />
+
+        <Button
+            android:id="@+id/btExplore"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/etSearch"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginEnd="8dp"
+            android:background="@color/colorAccentDark"
+            android:elevation="6dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/explore_bangs" />
+
+    </RelativeLayout>
+</layout>
