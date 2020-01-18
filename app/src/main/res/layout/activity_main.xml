@@ -17,7 +17,6 @@
             android:layout_marginStart="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
             android:layout_toStartOf="@+id/ibSearch"
-            android:autofillHints=""
             android:background="@color/colorAccent"
             android:elevation="4dp"
             android:ems="10"
@@ -35,7 +34,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="@dimen/margin"
             android:background="@color/colorAccentDark"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/search"
             android:elevation="6dp"
             android:padding="@dimen/padding"
             app:srcCompat="@drawable/ic_search_black" />

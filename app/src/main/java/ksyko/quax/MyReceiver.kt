@@ -14,19 +14,14 @@ class MyReceiver : BroadcastReceiver() {
         if (intent.getStringExtra("OP") == "ADD") {
             val query = getMessageText(intent).toString()
             val encodedQuery = URLEncoder.encode(query, "UTF-8")
-            if (query.startsWith("!")) Banger.bang(context, query)
-            else Banger.bang(context, encodedQuery)
-        } else {
-            with(NotificationManagerCompat.from(context)) {
-                cancelAll()
-            }
+            if (query.startsWith("!")) Banger.bang(context, query, true)
+            else Banger.bang(context, encodedQuery, true)
+        } else with(NotificationManagerCompat.from(context)) {
+            cancelAll()
         }
     }
 
 
-    private fun getMessageText(intent: Intent): CharSequence? {
-        return RemoteInput.getResultsFromIntent(intent)?.getCharSequence("QUACK")
-    }
-
-
+    private fun getMessageText(intent: Intent): CharSequence? =
+        RemoteInput.getResultsFromIntent(intent)?.getCharSequence("QUACK")
 }

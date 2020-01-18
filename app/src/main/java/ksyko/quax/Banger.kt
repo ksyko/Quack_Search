@@ -28,8 +28,7 @@ object Banger {
                 CoroutineScope(Dispatchers.IO).launch {
                     if (notify)
                         notificationManager.makeNotification(
-                            121,
-                            "Failed to search for $decodedQuery"
+                            121
                         )
                 }
             }
@@ -41,7 +40,7 @@ object Banger {
                         intent.data = Uri.parse(response.request.url.toString())
                         ContextCompat.startActivity(context, intent, null)
                         if (notify)
-                            notificationManager.makeNotification(121, "")
+                            notificationManager.makeNotification(121)
                     }
                 }
             }
